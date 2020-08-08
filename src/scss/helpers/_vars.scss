@@ -1,0 +1,26 @@
+$text: #a9afc3;
+$red: #dd4242;
+$dark: #111319;
+$grey: #191c26;
+
+
+@function rem($px) {
+  @return ($px / 16) +rem;
+}
+
+@mixin center{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@mixin poppins400 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+}
+
+@mixin poppins700 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
