@@ -1,0 +1,73 @@
+.consultation{
+  position: relative;
+  z-index: 2;
+
+  &::before{
+    position: absolute;
+    content: '';
+    width: 42%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: $grey;
+    z-index: -1;
+  }
+}
+
+.no-webp .consultation{
+  background-image: url(../img/consult.jpg) !important;
+}
+
+.consultation__inner{
+  max-width: 29vw;
+}
+
+.consultation__box{
+  margin-bottom: 2.5rem;
+}
+
+.consultation__form{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+
+.consultation__input{
+  width: 48%;
+  background: none;
+  border: none;
+  color: $text;
+  padding: 0 10px 10px 0;
+  border-bottom: 1px solid $light_grey;
+  margin-bottom: 2rem;
+  outline: none;
+
+  &::placeholder{
+    color: $light_grey;
+  }
+
+  &:first-child{
+    margin-right: 1rem;
+  }
+}
+
+.consultation__textarea{
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0 10px 10px 0;
+  border-bottom: 1px solid $light_grey;
+  color: $text;
+  resize: vertical;
+  margin-bottom: 2rem;
+
+  &::placeholder{
+    color: $light_grey;
+  }
+}
+
+.consultation__btn{
+  cursor: pointer;
+}

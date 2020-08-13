@@ -4,3 +4,38 @@
   fill: rgba(#000, .5);
   transition: linear .2s;
 }
+
+.play__icon{
+  width: 20px;
+  height: 23px;
+  fill: #fff;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.logo__icon{
+  width: 120px;
+  height: 45px;
+}
+
+.readMore__icon{
+  width: 13px;
+  height: 13px;
+  fill: #fff;
+  transform: rotate(90deg);
+  position: absolute;
+  right: 0;
+  top: 4px;
+  transition: linear .2s;
+}
+
+.ourServices__icon{
+  width: 70px;
+  height: 70px;
+  fill: $text;
+  transition: linear .2s;
+}
+
+

@@ -1,12 +1,13 @@
 html{
 	box-sizing: border-box;
-  // font-size: 16px;
-  font-size: calc(112.5% + 0.25vw) 
+  font-size: calc(110% + 0.25vw) 
 }
 
 h1 { 
-  font-size: 7em; 
+  @include poppins700;
+  font-size: 5.5em; 
   line-height: 1;
+  text-transform: capitalize;
 }
 
 *, *::before, *::after{
@@ -33,6 +34,11 @@ li{
 h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   margin: 0;
+  color: #fff;
+
+  span{
+    color: $red;
+  }
 }
 
 button{
@@ -52,10 +58,19 @@ body{
   overflow-x: hidden;
 }
 
+.fullPage{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .container{
-	padding: 0 15px;
-	margin-left: 0.2vw;
+	// padding: 0 15px;
+  margin-left: 20vw;
 }
 
 .img {
@@ -66,49 +81,60 @@ body{
 }
 
 .suptitle{
-	text-transform: uppercase;
+  text-transform: uppercase;
+  padding-left: 85px;
+  position: relative;
+  margin-bottom: 1.3em;
+
+  &::before{
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 1px;
+    background-color: $text;
+    left: 0;
+    top: 45%;
+  }
 }
 .title{
   @include poppins700;
 	font-size: 3em;
-  text-transform: initial;
+  text-transform: capitalize;
   line-height: 1;
+  color: #fff;
+  margin-bottom: .5em;
 }
 .subtitle{
-	font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 1.3em;
 }
 .text{
+  font-size: .9em;
+  line-height: 1.5;
 	color: $text;
 }
 
 // Button
 .btn{
-	padding: 17px 5px 12px;
-	max-width: 260px;
-	width: 100%;
-	max-height: 60px;
-	background-color: transparent;
-	border: 1px solid #000;
-	color: #000;
-	font-size: rem(20);
-	font-weight: 700;
-	line-height: 1;
-	text-transform: uppercase;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	cursor: pointer;
-	transition: linear .2s;
+  min-width: 180px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border: 2px solid $red;
+  border-radius: 60px;
+  background-color: transparent;
+  transition: linear .2s;
 
 	&:hover{
-		background-color: #fff;
-		box-shadow: 0 15px 25px 0px rgba($text, .5);
+    background-color: rgba($red, .6);
 	}
 }
 .btn--on{
-	background-color: #000;
-	box-shadow: 0 15px 25px 0px rgba($text, .5);
+	background-color: rgba($red, .6);
 }
 
 // Preloader
@@ -153,118 +179,128 @@ body{
 
 // Burger
 .burger {
-  --burger-menu-radius: 4em;
-  position: relative;
-  z-index: 100;
-  display: block;
-  width: var(--burger-menu-radius);
-  height: var(--burger-menu-radius);
-  background: white;
-  border: solid 2px hsla(184, 9%, 62%, 0.4);
-  border-radius: 50%;
-  outline: none;
+  display: flex;
+  flex-direction: column;
+  transform: rotate(-45deg);
   cursor: pointer;
-  transition: 0.5s ease-in-out;
 
-  .line {
-    position: absolute;
-    left: 25%;
-    width: 50%;
-    height: 3px;
-    background: hsla(210, 29%, 24%, 0.3);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: all 0.5s ease;
+  .line{
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin: 4px 0;
+    margin-left: 8px;
 
-    &:nth-child(1) {
-      top: 30%;
-    }
-
-    &:nth-child(2) {
-      top: 50%;
-    }
-
-    &:nth-child(3) {
-      top: 70%;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #2980b9;
-      transform: translateX(-100%);
-      transition: all 0.25s ease;
-    }
-
-    @for $i from 2 through 3 {
-      &:nth-child(#{$i})::after {
-        transition-delay: 0.1s * ($i - 1);
-      }
-    }
-    
-  }
-
-  &.active {
-    .line {
-      &:nth-child(1) {
-        transform: translateY(calc(var(--burger-menu-radius) / 6)) rotate(45deg);
-      }
-
-      &:nth-child(2) {
-        transform: scaleX(0);
-      }
-
-      &:nth-child(3) {
-        transform: translateY(calc(var(--burger-menu-radius) / -5)) rotate(-45deg);
-      }
-    }
-  }
-
-  &:hover {
-    box-shadow: 0.4px 0.4px 0.8px rgba(0, 0, 0, 0.042), 1px 1px 2px rgba(0, 0, 0, 0.061),
-      1.9px 1.9px 3.8px rgba(0, 0, 0, 0.075), 3.4px 3.4px 6.7px rgba(0, 0, 0, 0.089),
-      6.3px 6.3px 12.5px rgba(0, 0, 0, 0.108), 15px 15px 30px rgba(0, 0, 0, 0.15);
-
-    .line::after {
-      transform: translateX(0);
+    &:nth-child(2){
+      margin-left: 0;
     }
   }
 }
 
 
 // SLider
-.slick-initialized{
-	height: auto;
+.swiper-container{
+  position: relative;
+}
+.slider__arrows{
+  display: flex;
+}
+.slide__arrow{
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  margin: 0 10px;
+  font-size: 0.8rem;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  transition: color linear .2s;
+
+  &::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: $red;
+    bottom: -1px;
+    right: 0;
+    transition: linear .2s;
+  }
+
+  &:hover{
+    color: $red;
+
+    &::before{
+      width: 100%;
+    }
+    
+    .readMore__icon{
+      fill: $red;
+    }
+  }
+}
+.slide__prev{
+  padding-right: 20px;
+}
+.slide__next{
+  padding-left: 20px;
+
+  &::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: $red;
+    bottom: -1px;
+    left: 0;
+    right: auto;
+    transition: linear .2s;
+  }
 }
 
-.slick-dots{
-	display: flex;
-	justify-content: center;
-	margin-top: 20px;
+// Read more
+.readMore{
+  font-size: .8em;
+  margin-top: 50px;
+  padding-right: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 0.6em;
+  border-bottom: 1px solid #fff;
+  position: relative;
+  transition: color linear .2s;
 
-	li{
-		cursor: pointer;
-		width: 20px;
-		height: 20px;
-		border-radius: 50%;
-		background-color: transparent;
-		border: 2px solid #2980b9;
-		transition: linear .2s;
-		margin: 0 5px;
-	}
+  &::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: $red;
+    bottom: -1px;
+    left: 0;
+    transition: linear .2s;
+  }
 
-	.slick-active{
-		background-color: #eee;
-	}
+  &:hover{
+    color: $red;
 
-	button{
-		border: none;
-		background: none;
-		font-size: 0;
-	}
+    &::before{
+      width: 100%;
+    }
+    
+    .readMore__icon{
+      fill: $red;
+    }
+  }
+
+  &--grey{
+    color: $text;
+    border-bottom: 1px solid rgba(#fff, .6);
+  }
 }
+
+
+
 

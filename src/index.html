@@ -22,12 +22,189 @@
 		@@include('./blocks/_header.html')
 
 
-		<!-- Intro -->
-		
+		<div class="fullpage" id="fullpage">
+			<!-- Intro -->
+			<section class="intro fullPage section" style="background-image: url(img/intro.webp)">
+				<div class="container">
+
+					<div class="intro__box">
+						<div class="intro__suptitle suptitle">Creative Ideas</div>
+						<h1 class="intro__title">Craft design solutions<span>.</span></h1>
+						<div class="intro__subtitle subtitle">We create new technoligies for your business thanks to our wonderful
+							team of proffessionals.</div>
+					</div>
+
+
+					<div class="intro__video">
+
+						<a class="play" href="#">
+							<svg class="play__icon">
+								<use xlink:href="#play"></use>
+							</svg>
+						</a>
+
+						<div class="intro__wrapper">
+							<div class="intro__wrapper-suptitle">about us</div>
+							<div class="intro__wrapper-subtitle">Promotion video</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+
+			<!-- About us -->
+			<section class="aboutUs fullPage section" style="background-image: url(img/about.webp)">
+				<div class="aboutUs__inner">
+					<div class="aboutUs__suptitle suptitle">about us</div>
+					<h6 class="aboutUs__title title">We are experts in our field<span>.</span></h6>
+					<div class="aboutUs__subtitle subtitle">Our digital company of proffessionals has been developing products for
+						15 years.</div>
+					<div class="aboutUs__text text">We've got a lot of awards for our work and develop applications that became
+						popular in the world. Every morning in our company begins with hot coffee and a stand-up. Discussion is an
+						important thing in the development process. Thus new ideas and ingenious solutions are born. Then we get to
+						work with renewed vigor and inspiration. We are never bored.</div>
+					<a class="aboutUs__readMore readMore" href="#">
+						read more
+						<span>
+							<svg class="readMore__icon">
+								<use xlink:href="#play"></use>
+							</svg>
+						</span>
+					</a>
+				</div>
+			</section>
+
+
+			<!-- Our Services -->
+			<section class="ourServices section">
+
+				<div class="ourServices__stars">
+					<picture>
+						<source class="img" srcset="img/stars_01.webp" type="image/webp">
+						<img class="img" src="img/stars_01.png" alt="">
+					</picture>
+				</div>
+
+				<div class="container">
+
+					<div class="ourServices__inner">
+						<div class="ourServices__suptitle suptitle">our services</div>
+						<h6 class="ourServices__title title">We do everything<span>.</span></h6>
+						<div class="ourServices__text text">You may be interested in what we can offer you. More services you can
+							find
+							below. We do everything at a high level.</div>
+
+						<div class="ourServices__slider-arrow slider__arrows">
+							<div class="slide__arrow slide__prev">Prev</div>
+							<div class="slide__arrow slide__next">Next</div>
+						</div>
+					</div>
 
 
 
+					<div class="swiper-container">
 
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide">
+								<div class="ourServices__item-img">
+									<svg class="ourServices__icon">
+										<use xlink:href="#ux"></use>
+									</svg>
+								</div>
+								<div class="ourServices__item-name">UI/UX And Brand Identity</div>
+								<a class="ourServices__item-readMore readMore readMore--grey" href="#">read more</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="ourServices__item-img">
+									<svg class="ourServices__icon">
+										<use xlink:href="#app"></use>
+									</svg>
+								</div>
+								<div class="ourServices__item-name">App Development</div>
+								<a class="ourServices__item-readMore readMore readMore--grey" href="#">read more</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="ourServices__item-img">
+									<svg class="ourServices__icon">
+										<use xlink:href="#seo"></use>
+									</svg>
+								</div>
+								<div class="ourServices__item-name">SEO & SMM Optimization</div>
+								<a class="ourServices__item-readMore readMore readMore--grey" href="#">read more</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="ourServices__item-img">
+									<svg class="ourServices__icon">
+										<use xlink:href="#web"></use>
+									</svg>
+								</div>
+								<div class="ourServices__item-name">Web Development</div>
+								<a class="ourServices__item-readMore readMore readMore--grey" href="#">read more</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="ourServices__item-img">
+									<svg class="ourServices__icon">
+										<use xlink:href="#ux"></use>
+									</svg>
+								</div>
+								<div class="ourServices__item-name">E-Commerce Development</div>
+								<a class="ourServices__item-readMore readMore readMore--grey" href="#">read more</a>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="ourServices__item-img">
+									<svg class="ourServices__icon">
+										<use xlink:href="#app"></use>
+									</svg>
+								</div>
+								<div class="ourServices__item-name">Marketing Strategy</div>
+								<a class="ourServices__item-readMore readMore readMore--grey" href="#">read more</a>
+							</div>
+
+						</div>
+
+					</div>
+
+
+
+				</div>
+			</section>
+
+
+			<!-- Consultation -->
+			<section class="consultation fullPage section" style="background-image: url(img/consult.webp)">
+				<div class="container">
+
+					<div class="consultation__inner">
+
+						<div class="consultation__box">
+							<div class="consultation__suptitle suptitle">let's get started</div>
+							<h6 class="consultation__title title">Get a free consultation<span>.</span></h6>
+							<div class="consultation__text text">We always try to implement our creative ideas at the highest level.
+								<br> Tell us about your project and we will make it work.</div>
+						</div>
+
+						<form class="consultation__form">
+							<input class="consultation__input" type="text" placeholder="Name" required>
+							<input class="consultation__input" type="email" placeholder="Email" required>
+							<textarea class="consultation__textarea" rows="5" placeholder="Message"></textarea>
+							<button class="consultation__btn btn" type="submit">Send message</button>
+						</form>
+
+					</div>
+
+				</div>
+			</section>
+
+
+		</div> <!-- End FullPage -->
 
 
 
