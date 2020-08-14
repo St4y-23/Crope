@@ -85,6 +85,7 @@ body{
   padding-left: 85px;
   position: relative;
   margin-bottom: 1.3em;
+  font-size: .8em;
 
   &::before{
     position: absolute;
@@ -98,7 +99,7 @@ body{
 }
 .title{
   @include poppins700;
-	font-size: 3em;
+	font-size: 2.5em;
   text-transform: capitalize;
   line-height: 1;
   color: #fff;
@@ -109,7 +110,7 @@ body{
   margin-bottom: 1.3em;
 }
 .text{
-  font-size: .9em;
+  font-size: .8em;
   line-height: 1.5;
 	color: $text;
 }

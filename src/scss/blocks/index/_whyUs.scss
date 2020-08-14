@@ -1,0 +1,88 @@
+.whyUs{
+  width: 100vw;
+  height: 100vh;
+  background: $bg;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.whyUs__stars{
+  position: absolute;
+  left: 2vw;
+  bottom: 0;
+  z-index: 1;
+}
+
+.whyUs__inner{
+  position: relative;
+  z-index: 2;
+  display: flex;
+}
+
+.whyUs__items{
+  margin-right: 5rem;
+  display: flex;
+}
+
+.whyUs__items-second{
+  margin-top: 2rem;
+  margin-left: 1.2rem;
+}
+
+.whyUs__item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(to bottom, $bg 0%, $dark 100%);
+
+  &:nth-child(2){
+    background: linear-gradient(to bottom, $dark 0%, $bg 100%);
+  }
+}
+
+.whyUs__item-num{
+  font-size: 2.5em;
+  color: #fff;
+  position: relative;
+  margin-right: -.9rem;
+  margin-bottom: 0.3rem;
+
+  span{
+    font-size: .6em;
+    color: $red;
+    vertical-align: super;
+    margin-left: 0.2rem;
+  }
+}
+
+.whyUs__box{
+  margin-top: -1rem;
+  max-width: 30vw;
+}
+
+.whyUs__features{
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1.3rem;
+}
+
+.whyUs__features-icon{
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.whyUs__features-name{
+  color: #fff;
+  font-size: 1.1em;
+  margin-bottom: 1rem;
+}
+
+.whyUs__features-info{
+  font-size: .9em;
+}

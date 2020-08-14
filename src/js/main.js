@@ -25,9 +25,7 @@ $(window).on('load', function () {
 $(function () {
 
   // Swiper
-  var mySwiper = new Swiper('.swiper-container', {
-    // Optional parameters
-    // direction: 'vertical',
+  var mySwiper = new Swiper('.ourServices__slider', {
     loop: true,
     slidesPerView: 5,
   
@@ -36,17 +34,23 @@ $(function () {
       prevEl: '.slide__prev',
       nextEl: '.slide__next',
     }
-  })
+  });
+
+  var mySwiper2 = new Swiper('.portfolio__slider', {
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 20,
+  });
 
 
-  // $('#fullpage').fullpage({
-  //   autoScrolling: true,
-  //   scrollBar: false,
-  //   navigation: true,
-  //   navigationTooltips: ['Home', 'About', 'Our Services', 'Consultation'],
-  //   showActiveTooltip: true,
-  //   loopBottom: true,
-  // });
+  $('#fullpage').fullpage({
+    autoScrolling: true,
+    scrollBar: false,
+    navigation: true,
+    navigationTooltips: ['Home', 'About', 'Our Services', 'Consultation'],
+    showActiveTooltip: true,
+    loopBottom: true,
+  });
 
 
   

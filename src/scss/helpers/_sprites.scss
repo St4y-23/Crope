@@ -1,7 +1,7 @@
 .arrow__icon{
-  width: 55px;
-  height: 55px;
-  fill: rgba(#000, .5);
+  width: 25px;
+  height: 25px;
+  fill: #fff;
   transition: linear .2s;
 }
 
@@ -36,6 +36,12 @@
   height: 70px;
   fill: $text;
   transition: linear .2s;
+}
+
+.whyUs__icon{
+  width: 22px;
+  height: 22px;
+  fill: $red;
 }
 
 
