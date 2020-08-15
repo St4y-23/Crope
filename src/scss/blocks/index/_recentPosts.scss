@@ -1,0 +1,153 @@
+.recentPosts{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: $bg;
+  overflow: hidden;
+}
+
+.recentPosts__stars{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 1;
+  min-width: 40vw;
+}
+
+.recentPosts__box{
+  position: relative;
+  margin-bottom: 2rem;
+  max-width: 29vw;
+  z-index: 2;
+
+  @media (max-width: 1920px) {
+    max-width: 560px;
+  }
+}
+
+.recentPosts__inner{
+  position: relative;
+  display: flex;
+  z-index: 2;
+}
+
+.recentPosts__left{
+  margin-right: 5rem;
+}
+
+.recentPosts__small{
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: flex;
+  max-width: 29vw;
+
+  &:hover{
+    .gradient{
+      opacity: 1;
+    }
+
+    .recentPosts__small-img{
+
+      img{
+        filter: grayscale(0);
+      }
+    }
+  }
+}
+
+.recentPosts__small-img{
+  border-radius: 15px;
+  width: 9vw;
+  height: 9vw;
+  margin-right: 1.5rem;
+  overflow: hidden;
+  position: relative;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: linear .2s;
+    filter: grayscale(70%);
+  }
+}
+
+.recentPosts__wrapper{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  z-index: 2;
+  max-width: 50%;
+}
+
+.recentPosts__info{
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+
+.recentPosts__tag{
+  padding: .1rem .5rem;
+  text-align: center;
+  color: #fff;
+  background-color: $red;
+  margin-right: .6rem;
+  font-size: 0.6em;
+}
+
+.recentPosts__date{
+  font-size: 0.8em;
+}
+
+.recentPosts__name{
+  color: #fff;
+  font-size: .9em;
+}
+
+.recentPosts__link{
+  margin: 0;
+  font-size: 0.6em;
+  padding-right: 0;
+}
+
+
+
+.recentPosts__big{
+  margin-top: -4rem;
+  width: 23vw;
+  height: 25vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .recentPosts__wrapper{
+    max-width: 60%;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.recentPosts__big-img{
+  border-radius: 15px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0%);
+  }
+}
+
+.recentPosts__big-gradient{
+  opacity: 1;
+}

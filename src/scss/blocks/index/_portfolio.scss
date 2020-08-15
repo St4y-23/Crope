@@ -35,7 +35,7 @@
   overflow: hidden;
 
   &:hover{
-    .portfolio__item-gradient{
+    .gradient{
       opacity: 1;
     }
 
@@ -57,7 +57,7 @@
   }
 }
 
-.portfolio__item-gradient{
+.gradient{
   position: absolute;
   width: 100%;
   height: 100%;
